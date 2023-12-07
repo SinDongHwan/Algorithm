@@ -7,11 +7,16 @@ def solution(num_list):
         print(f"num_list length Error : {len(num_list)}")
         return -1
     
+#    for i in num_list:
+#        mul *= i
+#    pow_of_sum = sum(num_list)**2
+
+#    if mul < pow_of_sum:
+#        answer = 1
+
     for i in num_list:
         mul *= i
-    pow_of_sum = sum(num_list)**2
-
-    if mul < pow_of_sum:
+        pow_of_sum += i
+    if mul < pow_of_sum**2:
         answer = 1
-        
     return answer
