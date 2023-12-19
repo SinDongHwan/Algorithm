@@ -1,9 +1,10 @@
 def solution(arr, n):
     answer = []
-    for idx, num in enumerate(arr):
-        if len(arr)%2 and idx%2 == 0:
-            arr[idx] += n
-        elif len(arr)%2 == 0 and idx%2:
-            arr[idx] += n
     answer = arr
+    if len(answer)%2:
+        for idx in range(0,len(answer),2):
+            answer[idx] += n
+    else:
+        for idx in range(1,len(answer),2):
+            answer[idx] += n
     return answer
